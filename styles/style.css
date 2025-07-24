@@ -18,20 +18,23 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+body{
+  overflow-x: hidden;
+}
 
 /* Shared syles */
 .bg-primary{
   background-color: #F5F8FF;
-  margin: 0 300px;
+  margin: 0 auto;
+  padding: 0 16px; 
+  max-width: 1200px;
 }
-.btn-primary{
+.btn-primary {
+  width: 100%;
   background-color: #E95A08;
-  font-weight: 500;
-  width: 16.87rem;
-  height: 3.12rem;
+  color: white;
+  padding: 10px;
   border: none;
-  
 }
 .btn-primary a{
   text-decoration: none;
@@ -132,24 +135,75 @@ text-align: center;
 .card-body{
   align-items: center;
 }
-.plants-card{
+.plants-card {
   width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.plants-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .plants-box{
-  max-width: 1340px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* justify-items: center; */
-  gap: 10px;
+  gap: 16px;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
   
 }
+.flower-plants{
+  margin-top: 200px;
+  margin-bottom: 50px;
+  display: flex;
+  gap: 150px;
+  border: 3px solid red;
+}
+.flower-wrapper{
+  border: 2px solid blue;
+  position: relative;
+  display: inline-block;
+}
+.people-image{
+  width: 540px;
+  display: block;
+}
+.badge-icon{
+  position: absolute;
+  top: -25%;
+  right: -25%;
+  width: 286px;
+}
+
+.flower-description li{
+  padding: 20px;
+}
+.flower-description{
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+
+}
+.flower-title{
+  font-size: 50px;
+  font-weight: 700;
+  color: #000000;
+}
+
 
 
 /* Mobile Responsive */
 @media screen and (max-width:576px) {
   .bg-primary{
     margin: 0 16px;
+}
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
 }
   .menu-item{
     display: none;
@@ -183,17 +237,29 @@ text-align: center;
     
     
   }
-
-  .plants-box{
+/* Masum */
+   .plants-box {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 8px;
     gap: 10px;
-    justify-items: center;
-    
-    
-    
+  }
+  .plant-card{
+    width: 100%;
   }
 
   .plants-content{
     justify-items: center;
+  }
+
+  /* Flower Plant style */
+  .flower-plants{
+    flex-direction: column;
+  }
+  .people-image{
+    max-width: 330px;
+    
+  }
+  .badge-icon{
+    display: none;
   }
 }
